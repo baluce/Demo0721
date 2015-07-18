@@ -24,20 +24,29 @@
 
     <script>
 
-        var dataSet = @Html.Raw(Json.Encode(ViewBag.data));
+        var dataSet = "";
 
         $(document).ready(function () {
-            $('#example').dataTable({
-                "data": dataSet,
-                "columns": [
-                    { "title": "Engine" },
-                    { "title": "Browser" },
-                    { "title": "Platform" },
-                    { "title": "Version", "class": "center" },
-                    { "title": "Grade", "class": "center" }
-                ]
+            $.ajax({
+                url: 'GetData',
+                type: "GET",
+                dataType: 'json'
+            }).success(function (data) {
+                dataSet = data;
+            }).done(function () {
+                $('#example').dataTable({
+                    "data": dataSet,
+                    "columns": [
+                        { "title": "Engine" },
+                        { "title": "Browser" },
+                        { "title": "Platform" },
+                        { "title": "Version", "class": "center" },
+                        { "title": "Grade", "class": "center" }
+                    ]
+                });
             });
         });
+
     </script>
 </head>
 <body>

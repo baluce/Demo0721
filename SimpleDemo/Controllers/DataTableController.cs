@@ -9,10 +9,15 @@ namespace SimpleDemo.Controllers
     public class DataTableController : Controller
     {
         public ActionResult Test0()
+        {   
+            return View();
+        }
+
+        public ActionResult GetData()
         {
             List<string[]> data = MyDataSource();
-            ViewBag.data = data;
-            return View();
+
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
         private List<string[]> MyDataSource()
