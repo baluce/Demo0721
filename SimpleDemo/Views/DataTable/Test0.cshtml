@@ -26,7 +26,12 @@
 
         $(document).ready(function () {
             $('#example').dataTable({
-                "ajax": "GetData?num=15",
+                "ajax": {
+                            "url": "GetData",
+                            "data": { num: 20 },
+                            "type": "POST"
+                            //"type": "GET"
+                        },
                 "columns": [
                         { "data": "Engine" },
                         { "data": "Browser" },
