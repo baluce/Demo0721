@@ -24,26 +24,16 @@
 
     <script>
 
-        var dataSet = "";
-
         $(document).ready(function () {
-            $.ajax({
-                url: 'GetData',
-                type: "GET",
-                dataType: 'json'
-            }).success(function (data) {
-                dataSet = data;
-            }).done(function () {
-                $('#example').dataTable({
-                    "data": dataSet,
-                    "columns": [
-                        { "title": "Engine" },
-                        { "title": "Browser" },
-                        { "title": "Platform" },
-                        { "title": "Version", "class": "center" },
-                        { "title": "Grade", "class": "center" }
-                    ]
-                });
+            $('#example').dataTable({
+                "ajax": "GetData",
+                "columns": [
+                        { "data": "Engine" },
+                        { "data": "Browser" },
+                        { "data": "Platform" },
+                        { "data": "Version", "class": "center" },
+                        { "data": "Grade", "class": "center" }
+                ]
             });
         });
 

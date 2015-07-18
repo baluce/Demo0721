@@ -15,9 +15,28 @@ namespace SimpleDemo.Controllers
 
         public ActionResult GetData()
         {
-            List<string[]> data = MyDataSource();
+            List<BrowserData> data = GetMyDataSource();
 
-            return Json(data, JsonRequestBehavior.AllowGet);
+            //這裡要做匿名物件
+            return Json(new { data = data }, JsonRequestBehavior.AllowGet);
+        }
+
+        private List<BrowserData> GetMyDataSource()
+        {
+            List<BrowserData> result = new List<BrowserData>();
+
+            //將資料來源隔離出來,這裡可以改用其他資料來源,如DB,CSV,XML....
+            foreach (var item in MyDataSource())
+            {
+                BrowserData data = new BrowserData();
+                data.Engine = item[0];
+                data.Browser = item[1];
+                data.Platform = item[2];
+                data.Version = item[3];
+                data.Grade = item[4];
+                result.Add(data);
+            }
+            return result;
         }
 
         private List<string[]> MyDataSource()
