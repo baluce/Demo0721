@@ -25,6 +25,19 @@ namespace SimpleDemo.Controllers
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult DelData(string id)
+        {
+            //todo:處理刪除,由於範例資料原為靜態資料,故只echo
+            if (string.IsNullOrEmpty(id))
+            {
+                return Json(new { success = false , msg = "刪除失敗"}, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { success = true, msg = "刪除成功" }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
         private List<BrowserData> GetMyDataSource()
         {
             List<BrowserData> result = new List<BrowserData>();

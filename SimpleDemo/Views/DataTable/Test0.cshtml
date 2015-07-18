@@ -48,7 +48,16 @@
 
             $('#example tbody').on('click', 'button.del', function () {
                 var data = table.row($(this).parents('tr')).data();
-                console.log(data);
+                $.ajax({
+                    url: "DelData",
+                    data: {
+                        id: data.Engine
+                    }
+                }).success(function (data) {
+                    table.ajax.reload();
+                    //table.ajax.reload(null, false); //頁數不會回第一頁
+                    alert(data.msg);
+                });
             });
         });
 
