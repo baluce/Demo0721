@@ -25,20 +25,30 @@
     <script>
 
         $(document).ready(function () {
-            $('#example').dataTable({
+            var table = $('#example').DataTable({
                 "ajax": {
                             "url": "GetData",
                             "data": { num: 20 },
                             "type": "POST"
                             //"type": "GET"
-                        },
+                },
                 "columns": [
-                        { "data": "Engine" },
-                        { "data": "Browser" },
-                        { "data": "Platform" },
-                        { "data": "Version", "class": "center" },
-                        { "data": "Grade", "class": "center" }
+                    { "data": "Engine" },
+                    { "data": "Browser" },
+                    { "data": "Platform" },
+                    { "data": "Version", "class": "center" },
+                    { "data": "Grade", "class": "center" },
+                    {
+                        "targets": -1,
+                        "data": null,   //如果是資料庫來源,這裡可以放id
+                        "defaultContent": "<button class='del'>click</button>"
+                    }
                 ]
+            });
+
+            $('#example tbody').on('click', 'button.del', function () {
+                var data = table.row($(this).parents('tr')).data();
+                console.log(data);
             });
         });
 
