@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SimpleDemo.Controllers
 {
-    class BrowserData
+    public class BrowserData
     {
         public string Engine { get; set; }
         public string Browser { get; set; }

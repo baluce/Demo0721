@@ -38,6 +38,18 @@ namespace SimpleDemo.Controllers
             }
         }
 
+        public ActionResult CreateData(BrowserData data)
+        {
+            //todo:處理新增,由於範例資料原為靜態資料,且為form post,故僅重導到Test0
+            return RedirectToAction("Test0");
+        }
+
+        public ActionResult EditData(BrowserData data)
+        {
+            //todo:處理編輯,由於範例資料原為靜態資料,且為form post,故僅重導到Test0
+            return RedirectToAction("Test0");
+        }
+
         private List<BrowserData> GetMyDataSource()
         {
             List<BrowserData> result = new List<BrowserData>();
