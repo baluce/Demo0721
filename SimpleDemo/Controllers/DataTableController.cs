@@ -8,10 +8,9 @@ namespace SimpleDemo.Controllers
 {
     public class DataTableController : Controller
     {
-        // GET: DataTable
         public ActionResult Test0()
         {
-            return Redirect("~/DataTableTest0.html");
+            return View();
         }
     }
 }
