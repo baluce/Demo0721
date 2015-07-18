@@ -13,12 +13,16 @@ namespace SimpleDemo.Controllers
             return View();
         }
 
-        public ActionResult GetData()
+        public ActionResult GetData(int? num)
         {
             List<BrowserData> data = GetMyDataSource();
 
+            int rows = num.HasValue ? num.Value : 0;
+
+            var result = data.Take(rows);
+
             //這裡要做匿名物件
-            return Json(new { data = data }, JsonRequestBehavior.AllowGet);
+            return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
 
         private List<BrowserData> GetMyDataSource()
