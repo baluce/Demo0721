@@ -41,13 +41,27 @@ namespace SimpleDemo.Controllers
         public ActionResult CreateData(BrowserData data)
         {
             //todo:處理新增,由於範例資料原為靜態資料,且為form post,故僅重導到Test0
-            return RedirectToAction("Test0");
+            if (null == data)
+            {
+                return Json(new { success = false, msg = "新增失敗" }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { success = true, msg = "新增成功" }, JsonRequestBehavior.AllowGet);
+            }
         }
 
         public ActionResult EditData(BrowserData data)
         {
             //todo:處理編輯,由於範例資料原為靜態資料,且為form post,故僅重導到Test0
-            return RedirectToAction("Test0");
+            if (null == data)
+            {
+                return Json(new { success = false, msg = "編輯失敗" }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { success = true, msg = "編輯成功" }, JsonRequestBehavior.AllowGet);
+            }
         }
 
         private List<BrowserData> GetMyDataSource()

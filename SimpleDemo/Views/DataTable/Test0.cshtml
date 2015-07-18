@@ -14,9 +14,6 @@
             margin: 0;
             padding: 0;
         }
-
-
-
     </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -27,16 +24,15 @@
 
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js"></script>
 
-
     <script>
 
         $(document).ready(function () {
             var table = $('#example').DataTable({
                 "ajax": {
-                            "url": "GetData",
-                            "data": { num: 20 },
-                            "type": "POST"
-                            //"type": "GET"
+                    "url": "GetData",
+                    "data": { num: 20 },
+                    "type": "POST"
+                    //"type": "GET"
                 },
                 "columns": [
                     { "data": "Engine" },
@@ -47,13 +43,15 @@
                     {
                         "targets": -1,
                         "data": null,   //如果是資料庫來源,這裡可以放id
-                        "orderable":false,
+                        "orderable": false,
+                        "searchable": false,
                         "defaultContent": "<button class='del'>刪除</button>"
                     },
                     {
                         "targets": -1,
                         "data": null,   //如果是資料庫來源,這裡可以放id
                         "orderable": false,
+                        "searchable": false,
                         "defaultContent": "<button class='edit'>編輯</button>"
                     }
                 ]
@@ -75,13 +73,51 @@
 
             $('#example tbody').on('click', 'button.edit', function () {
                 var data = table.row($(this).parents('tr')).data();
-                $('#editModal').modal({ show: true });
+                $('#popupModal .modal-title').text('編輯');
+                $('#popupModal input[name="Engine"]')[0].value = data.Engine;
+                $('#popupModal input[name="Browser"]')[0].value = data.Browser;
+                $('#popupModal input[name="Platform"]')[0].value = data.Platform;
+                $('#popupModal input[name="Version"]')[0].value = data.Version;
+                $('#popupModal input[name="Grade"]')[0].value = data.Grade;
+
+                $('#popupModal').modal({ show: true });
             });
 
             $('#add').on('click', function () {
-                $('#createModal').modal({ show: true });
+                $('#popupModal .modal-title').text('新增');
+                $('#popupModal input[name="Engine"]')[0].value = '';
+                $('#popupModal input[name="Browser"]')[0].value = '';
+                $('#popupModal input[name="Platform"]')[0].value = '';
+                $('#popupModal input[name="Version"]')[0].value = '';
+                $('#popupModal input[name="Grade"]')[0].value = '';
+
+                $('#popupModal').modal({ show: true });
             });
-            
+
+            $('#send').on('click', function () {
+                var url = 'CreateData';
+                if ($('#popupModal .modal-title').text() == '編輯') {
+                    url = 'EditData';
+                }
+
+                $.ajax({
+                    url: url,
+                    data: {
+                        Engine: $('#popupModal input[name="Engine"]')[0].value,
+                        Browser: $('#popupModal input[name="Browser"]')[0].value,
+                        Platform: $('#popupModal input[name="Platform"]')[0].value,
+                        Version: $('#popupModal input[name="Version"]')[0].value,
+                        Grade: $('#popupModal input[name="Grade"]')[0].value
+                    }
+                }).success(function (data) {
+                    table.ajax.reload();
+                    //table.ajax.reload(null, false); //頁數不會回第一頁
+                    alert(data.msg);
+                    $('#popupModal').modal('hide');
+                });
+
+            });
+
         });
 
     </script>
@@ -92,15 +128,15 @@
         <table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>
     </div>
 
-    <div id="createModal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="popupModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h3 class="modal-title">新增</h3>
+                    <h3 class="modal-title"></h3>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" action="CreateData" method="post">
+                    <div class="form-horizontal">
                         <div class="form-group">
                             <label for="input-demo1" class="col-sm-2 control-label">Engine</label>
                             <div class="col-sm-10">
@@ -133,10 +169,10 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">送出</button>
+                                <button id="send" class="btn btn-default">送出</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 @*<div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -146,61 +182,5 @@
         </div>
     </div>
 
-    <div id="editModal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h3 class="modal-title">編輯</h3>
-                </div>
-                <div class="modal-body">
-                    <form class="form-horizontal" action="EditData" method="post">
-                        <div class="form-group">
-                            <label for="input-demo1" class="col-sm-2 control-label">Engine</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input-demo1" name="Engine">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-demo2" class="col-sm-2 control-label">Browser</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input-demo2" name="Browser">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-demo3" class="col-sm-2 control-label">Platform</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input-demo3" name="Platform">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-demo4" class="col-sm-2 control-label">Version</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input-demo4" name="Version">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-demo5" class="col-sm-2 control-label">Grade</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="input-demo5" name="Grade">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">送出</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                @*<div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>*@
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>
-
-
