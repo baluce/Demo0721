@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>company_new</name>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 日商秋光股份有限公司<br>公司所在地: 臺北市信義區光復南路495號7樓之2<br>代表人: 山下浩太<br>資本額: 0<br>核准設立日期: 1050130]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>日商秋光股份有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>臺北市信義區光復南路495號7樓之2</value>
+				</Data>
+				<Data name='代表人'>
+					<value>山下浩太</value>
+				</Data>
+				<Data name='資本額'>
+					<value>0</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050130</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.557678,25.032459,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 薩摩亞商嘉運創投有限公司<br>公司所在地: 臺中市南屯區文心路1段186號20樓<br>代表人: 白嘉雄<br>資本額: 0<br>核准設立日期: 1050130]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>薩摩亞商嘉運創投有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>臺中市南屯區文心路1段186號20樓</value>
+				</Data>
+				<Data name='代表人'>
+					<value>白嘉雄</value>
+				</Data>
+				<Data name='資本額'>
+					<value>0</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050130</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>120.64705499999998,24.141559,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 薩摩亞商吉羽網路科技有限公司<br>公司所在地: 臺北市大安區新生南路1段155號3樓<br>代表人: 黃瀚輝<br>資本額: 500000<br>核准設立日期: 1050201]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>薩摩亞商吉羽網路科技有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>臺北市大安區新生南路1段155號3樓</value>
+				</Data>
+				<Data name='代表人'>
+					<value>黃瀚輝</value>
+				</Data>
+				<Data name='資本額'>
+					<value>500000</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050201</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.532976,25.035154,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 新加坡商博安科技有限公司<br>公司所在地: 臺北市中山區松江路122號11樓<br>代表人: 邱維添<br>資本額: 0<br>核准設立日期: 1050201]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>新加坡商博安科技有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>臺北市中山區松江路122號11樓</value>
+				</Data>
+				<Data name='代表人'>
+					<value>邱維添</value>
+				</Data>
+				<Data name='資本額'>
+					<value>0</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050201</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.532806,25.052458,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 吉泰不動產有限公司<br>公司所在地: 金門縣金城鎮北門里民生路27巷3號<br>代表人: 林燕平<br>資本額: 1000000<br>核准設立日期: 1050201]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>吉泰不動產有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>金門縣金城鎮北門里民生路27巷3號</value>
+				</Data>
+				<Data name='代表人'>
+					<value>林燕平</value>
+				</Data>
+				<Data name='資本額'>
+					<value>1000000</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050201</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.31934600000001,24.434714,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 英屬維京群島商神奇嬌點有限公司<br>公司所在地: 臺北市中山區錦州街312號(1樓)<br>代表人: 林鉑棟<br>資本額: 2000000<br>核准設立日期: 1050201]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>英屬維京群島商神奇嬌點有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>臺北市中山區錦州街312號(1樓)</value>
+				</Data>
+				<Data name='代表人'>
+					<value>林鉑棟</value>
+				</Data>
+				<Data name='資本額'>
+					<value>2000000</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050201</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.537645,25.060198,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 英屬維京群島商慧星股份有限公司<br>公司所在地: 新北市新莊區後港里建安街26巷6弄7號1樓<br>代表人: 李宜萍<br>資本額: 1000000<br>核准設立日期: 1050203]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>英屬維京群島商慧星股份有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>新北市新莊區後港里建安街26巷6弄7號1樓</value>
+				</Data>
+				<Data name='代表人'>
+					<value>李宜萍</value>
+				</Data>
+				<Data name='資本額'>
+					<value>1000000</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050203</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.42832300000002,25.026141,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: 香港商機時股份有限公司<br>公司所在地: 桃園市桃園區東埔里信光路123號6樓<br>代表人: 布蘭可 荷西<br>資本額: 5000000<br>核准設立日期: 1050202]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value>香港商機時股份有限公司</value>
+				</Data>
+				<Data name='公司所在地'>
+					<value>桃園市桃園區東埔里信光路123號6樓</value>
+				</Data>
+				<Data name='代表人'>
+					<value>布蘭可 荷西</value>
+				</Data>
+				<Data name='資本額'>
+					<value>5000000</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>1050202</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>121.30508599999999,25.004938,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name></name>
+			<description><![CDATA[說明: <br>公司名稱: <br>公司所在地: <br>代表人: <br>資本額: 0<br>核准設立日期: 0]]></description>
+			<styleUrl>#icon-ci-1</styleUrl>
+			<ExtendedData>
+				<Data name='說明'>
+					<value></value>
+				</Data>
+				<Data name='公司名稱'>
+					<value></value>
+				</Data>
+				<Data name='公司所在地'>
+					<value></value>
+				</Data>
+				<Data name='代表人'>
+					<value></value>
+				</Data>
+				<Data name='資本額'>
+					<value>0</value>
+				</Data>
+				<Data name='核准設立日期'>
+					<value>0</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>120.96051500000002,23.69781,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-ci-1-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>images/icon-1.png</href>
+				</Icon>
+				<hotSpot x='16' y='16' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-ci-1-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>images/icon-1.png</href>
+				</Icon>
+				<hotSpot x='16' y='16' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-ci-1'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-ci-1-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-ci-1-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
